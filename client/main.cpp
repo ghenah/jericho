@@ -45,17 +45,6 @@ int main()
 
   memset(buf, 0, 4096);
   std::cout << "connected" << std::endl;
-  int bytesReceived = recv(sock, buf, 4096, 0);
-  std::cout << "connected-recv" << std::endl;
-  if (bytesReceived == -1)
-  {
-    std::cout << "there was an error getting response from server\r\n";
-    return 1;
-  }
-  else
-  {
-    std::cout << "Server> " << std::string(buf, bytesReceived);
-  }
 
   // Reading user input
   std::mutex mutex;
